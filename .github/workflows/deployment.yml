@@ -43,6 +43,5 @@ jobs:
 
       - name: Deploy 
         run: echo "Deploying..."
-          scp -r ./dist user@your-server:/path/to/deploy
-          ssh user@your-server "cd /path/to/deploy && npm install --production"
+          
 
