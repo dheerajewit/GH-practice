@@ -1,7 +1,7 @@
 
 name: Deploy Project
 
-on: push
+on: [push, workflow_dispatch]
 
 jobs:
   test:
@@ -42,7 +42,7 @@ jobs:
         run: npm run build
 
       - name: Deploy 
-        run: echo "Deploying ..."
+        run: echo "Deploying..."
           scp -r ./dist user@your-server:/path/to/deploy
           ssh user@your-server "cd /path/to/deploy && npm install --production"
 
